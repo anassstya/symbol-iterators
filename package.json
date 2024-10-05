@@ -1,0 +1,29 @@
+{
+  "name": "symbols",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src/index.js",
+    "pack": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anassstya/symbol-iterators.git"
+  },
+  "author": "anassstya",
+  "type": "module",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anassstya/symbol-iterators/issues"
+  },
+  "homepage": "https://github.com/anassstya/symbol-iterators#readme",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "babel-loader": "^9.2.1",
+    "eslint": "^9.12.0",
+    "globals": "^15.10.0",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
