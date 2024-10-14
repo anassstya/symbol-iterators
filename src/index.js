@@ -17,29 +17,31 @@ class Team {
       new Character('Волшебник', 'Magician', 70, 2, 10, 20),
       new Character('Демон', 'Daemon', 30, 2, 40, 15),
     ];
-    this.currentIndex = 0;
   }
   
+  [Symbol.iterator]() {
+    this.currentIndex = 0; 
+    return this;
+  }
+
   next(){
     if(this.currentIndex < this.team.length){
       const character = this.team[this.currentIndex];
-        this.currentIndex ++;
+      this.currentIndex++;
+      return {
+        value: character,
+        done: false
+      };
+    } else {
         return {
-          value: character,
-          done: false
-        }
-      }
-        
+        value: null,
+        done: true
+      };
     }
-    
-    
+  }
+} 
+
+let team = new Team();
+for (let character of team) {
+  console.log(character);
 }
-
-
-let b = new Team();
-console.log(b.next())
-console.log(b.next())
-console.log(b.next())
-console.log(b.next())
-console.log(b.next())
-console.log(b.next())
